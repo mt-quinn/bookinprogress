@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Editor temporary files
+*~
+*.swp
+*.swo
+
+# Build artifacts (e.g., from Pandoc)
+*.pdf
+*.epub
+*.mobi
+
+# Personal notes
+notes.txt
+temp.*
