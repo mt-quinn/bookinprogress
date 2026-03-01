@@ -1,0 +1,1 @@
+This plugin  has been renamed to [[Friends Chat]].
