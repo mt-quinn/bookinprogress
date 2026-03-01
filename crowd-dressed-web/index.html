@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crowd Dressed – Vote</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+
+    <!-- ── Code entry screen ── -->
+    <div id="screen-enter" class="screen active">
+      <div class="card center-card">
+        <h1 class="logo">Crowd Dressed</h1>
+        <p class="subtitle">Vote on your favourite streamer's outfit.</p>
+        <div class="input-row">
+          <input id="code-input" type="text" maxlength="6" placeholder="Enter session code"
+                 autocomplete="off" spellcheck="false" />
+          <button id="code-submit" class="btn-primary">Go</button>
+        </div>
+        <p id="code-error" class="error-msg hidden">Session not found. Check the code and try again.</p>
+      </div>
+    </div>
+
+    <!-- ── Voting screen ── -->
+    <div id="screen-vote" class="screen">
+      <header class="site-header">
+        <span class="logo-small">Crowd Dressed</span>
+        <span id="header-code" class="header-code"></span>
+        <button id="change-code" class="btn-ghost">Change code</button>
+      </header>
+
+      <div class="vote-layout">
+
+        <!-- Left: slot tabs + search + results -->
+        <main class="vote-main">
+          <nav class="slot-tabs" id="slot-tabs"></nav>
+
+          <div class="search-bar">
+            <input id="item-search" type="text" placeholder="Search items…" autocomplete="off" />
+          </div>
+
+          <div id="item-results" class="item-grid"></div>
+          <p id="search-hint" class="search-hint">Start typing to search for an item in this slot.</p>
+          <p id="no-results" class="search-hint hidden">No items found.</p>
+        </main>
+
+        <!-- Right: current standings -->
+        <aside class="standings">
+          <h2 class="standings-title">Current Leaders</h2>
+          <div id="standings-list"></div>
+          <p class="standings-note">Updates when you vote or refresh.</p>
+        </aside>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
